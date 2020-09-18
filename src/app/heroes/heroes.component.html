@@ -9,19 +9,4 @@
 </div>
 
 
-<h2>hero detail</h2>
-<div *ngIf="selectedHero">
-  <div>id: {{ selectedHero.id }}</div>
-  <div>name:{{ selectedHero.name | uppercase }}</div>
-  <div>age: {{ selectedHero.age }}</div>
-  <div>gender: {{ selectedHero.gender }}</div>
-
-  <div>
-    <span>编辑姓名：</span>
-    <div>
-      <input type="text" [(ngModel)]="selectedHero.name">
-    </div>
-  </div>
-  <hr>
-</div>
-
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

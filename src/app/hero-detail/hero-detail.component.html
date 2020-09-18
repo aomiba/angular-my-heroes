@@ -1,0 +1,15 @@
+<h2>hero detail</h2>
+<div *ngIf="hero">
+  <div>id: {{ hero.id }}</div>
+  <div>name:{{ hero.name | uppercase }}</div>
+  <div>age: {{ hero.age }}</div>
+  <div>gender: {{ hero.gender }}</div>
+
+  <div>
+    <span>编辑姓名：</span>
+    <div>
+      <input type="text" [(ngModel)]="hero.name">
+    </div>
+  </div>
+  <hr>
+</div>
