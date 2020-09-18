@@ -1,0 +1,27 @@
+<h2>my heroes</h2>
+
+<div *ngFor="let hero of heroes">
+  <div [class.selected]="hero == selectedHero" style="cursor: pointer;" (click)="handleSelectedHero(hero)">
+    <div>id: {{ hero.id }}</div>
+    <div>name:{{ hero.name | uppercase }}</div>
+  </div>
+  <hr>
+</div>
+
+
+<h2>hero detail</h2>
+<div *ngIf="selectedHero">
+  <div>id: {{ selectedHero.id }}</div>
+  <div>name:{{ selectedHero.name | uppercase }}</div>
+  <div>age: {{ selectedHero.age }}</div>
+  <div>gender: {{ selectedHero.gender }}</div>
+
+  <div>
+    <span>编辑姓名：</span>
+    <div>
+      <input type="text" [(ngModel)]="selectedHero.name">
+    </div>
+  </div>
+  <hr>
+</div>
+
